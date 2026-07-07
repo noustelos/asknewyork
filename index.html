@@ -240,7 +240,7 @@
     .acquire-slogan {
       align-self: center; margin: 0 0 clamp(16px, 2.5vw, 26px); text-align: center;
       font-family: var(--font-display); font-style: italic;
-      font-size: 14.5px; color: var(--ink-55);
+      font-size: 14.4px; color: var(--ink-55);
     }
 
     /* staged entrance order: notice → topbar → title → chat → closing → revenue → footer → CTA */
@@ -607,6 +607,11 @@
     .revenue-card p { margin: 0; font-size: 14.5px; line-height: 1.6; color: var(--ink-70); }
     .revenue-card p a { color: var(--brass); font-weight: 500; text-decoration: none; transition: color .18s ease; }
     .revenue-card p a:hover { color: var(--brass-deep); text-decoration: underline; text-underline-offset: 3px; }
+    .revenue-slogan {
+      margin: 6px 0 0; max-width: 620px;
+      font-family: var(--font-display); font-style: italic; font-weight: 500;
+      font-size: 14.4px; line-height: 1.4; color: var(--ink);
+    }
     .revenue-proof {
       margin: 2px 0 0; max-width: 620px;
       font-family: var(--font-display); font-style: italic;
@@ -678,7 +683,6 @@
     @media (max-width: 760px) {
       /* the tracked caps lines are too wide for narrow screens — relax them */
       .acquire { letter-spacing: 0.12em; font-size: 10.5px; padding: 7px 14px; }
-      .acquire-slogan { font-size: 13.5px; }
       .wordmark { font-size: 15px; letter-spacing: 0.16em; padding-left: 0.16em; }
       .hero-row { flex-wrap: wrap; }
       .hero-left, .hero-right { flex: 1 1 100%; max-width: 100%; }
@@ -946,6 +950,7 @@
               <p>Premium placement, clearly labeled.</p>
             </div>
           </div>
+          <p class="revenue-slogan">Don’t buy a domain. Own the verb.</p>
           <p class="revenue-proof">The flagship already runs a working affiliate attribution system — this domain is ready for the same engine.</p>
         </section>
 
