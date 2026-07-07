@@ -126,7 +126,7 @@
     }
     @media (prefers-reduced-motion: reduce) {
       .mark, .mark .diamond, .send-btn, .availability .dot, .chat-status .live, .clock-meta .dot { animation: none !important; }
-      .acquire, .topbar, .hero-left, .hero-right, .closing, .revenue, .foot, .cta-pill, .studio-mark { animation: none !important; }
+      .acquire, .acquire-slogan, .topbar, .hero-left, .hero-right, .closing, .revenue, .foot, .cta-pill, .studio-mark { animation: none !important; }
       .send-btn::after { display: none; }
       .deco-weave { transition: none !important; }
       .bubble.typing .tdot { animation: none !important; }
@@ -221,7 +221,7 @@
       align-self: center; max-width: 100%;
       display: inline-flex; flex-wrap: wrap; align-items: center; justify-content: center;
       text-align: center; gap: 10px;
-      margin-bottom: clamp(16px, 2.5vw, 26px);
+      margin-bottom: 10px;
       padding: 8px 18px; border-radius: 999px;
       border: 1px solid rgba(20,69,61,0.42);
       background: #fff;
@@ -237,11 +237,17 @@
       box-shadow: 0 12px 26px -14px rgba(20,69,61,0.65);
     }
     .acquire:hover .diamond { background: #fff; }
+    .acquire-slogan {
+      align-self: center; margin: 0 0 clamp(16px, 2.5vw, 26px); text-align: center;
+      font-family: var(--font-display); font-style: italic;
+      font-size: 14.5px; color: var(--ink-55);
+    }
 
     /* staged entrance order: notice → topbar → title → chat → closing → revenue → footer → CTA */
-    .acquire, .topbar, .hero-left, .hero-right, .closing, .revenue, .foot, .cta-pill, .studio-mark {
+    .acquire, .acquire-slogan, .topbar, .hero-left, .hero-right, .closing, .revenue, .foot, .cta-pill, .studio-mark {
       animation: nyRise .7s cubic-bezier(.2,.7,.2,1) both;
     }
+    .acquire-slogan { animation-delay: .04s; }
     .studio-mark { animation-delay: .72s; }
     .topbar     { animation-delay: .08s; }
     .hero-left  { animation-delay: .18s; }
@@ -672,6 +678,7 @@
     @media (max-width: 760px) {
       /* the tracked caps lines are too wide for narrow screens — relax them */
       .acquire { letter-spacing: 0.12em; font-size: 10.5px; padding: 7px 14px; }
+      .acquire-slogan { font-size: 13.5px; }
       .wordmark { font-size: 15px; letter-spacing: 0.16em; padding-left: 0.16em; }
       .hero-row { flex-wrap: wrap; }
       .hero-left, .hero-right { flex: 1 1 100%; max-width: 100%; }
@@ -797,6 +804,7 @@
         Premium domain available for acquisition
         <span class="enquire">· Enquire <span class="arrow" aria-hidden="true">→</span></span>
       </a>
+      <p class="acquire-slogan">Don't buy a domain. Own the verb.</p>
 
       <!-- ===================== TOP BAR ===================== -->
       <header class="topbar">
